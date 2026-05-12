@@ -1,0 +1,86 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+dist/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+.nyc_output/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# User data (should not be committed)
+materials/raw/*
+materials/indexed/*
+materials/archive/*
+!materials/raw/.gitkeep
+!materials/indexed/.gitkeep
+!materials/archive/.gitkeep
+
+_briefs/*
+!_briefs/.gitkeep
+
+# Knowledge base (爬虫系统生成的数据，不提交到仓库)
+_knowledge_base/raw/*
+_knowledge_base/indexed/*
+_knowledge_base/cache/*
+!_knowledge_base/raw/.gitkeep
+!_knowledge_base/indexed/.gitkeep
+!_knowledge_base/cache/.gitkeep
+!_knowledge_base/README.md
+
+# Runtime state (should not be committed)
+memory/*
+!memory/README.md
+
+# User configuration presets (should not be committed)
+# Main config.json is tracked as template, but user-specific presets are not
+**/.content/config-*.json
+
+# Keep directory structure examples
+!workspaces/**/.gitkeep
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+desktop.ini
+
+other/
+
+openspec/
+
+docs/business/
+anthropic-paper-test/
