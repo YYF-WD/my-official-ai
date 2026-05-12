@@ -133,21 +133,29 @@ export async function getRemoteImageInfo(url: string): Promise<ImageInfo | null>
       }
     });
 
-    const contentType = response.headers['content-type'] || '';
-    const contentLength = parseInt(response.headers['content-length'] || '0', 10);
+    const contentTypeHeader = response.headers['content-type'];
+   const contentType: string = String(contentTypeHeader ?? '').toLowerCase();
+   const contentLengthHeader = response.headers['content-length']; 
+   const contentLength: number = parseInt(String(contentLengthHeader ?? '0'), 10);
 
     // 检查是否为图片类型
     if (!contentType.startsWith('image/')) {
-      return null;
+      throw new Error(`Invalid content type: ${contentType}`);
     }
 
     // 从 Content-Type 推断格式
-    let format = 'unknown';
-    if (contentType.includes('png')) format = 'png';
-    else if (contentType.includes('jpeg') || contentType.includes('jpg')) format = 'jpg';
-    else if (contentType.includes('webp')) format = 'webp';
-    else if (contentType.includes('gif')) format = 'gif';
-    else if (contentType.includes('svg')) format = 'svg';
+    let format = 'jpg';
+    if (contentType.includes('png')) {
+    format = 'png';
+} else if (contentType.includes('jpeg') || contentType.includes('jpg')) {
+    format = 'jpg';
+} else if (contentType.includes('webp')) {
+    format = 'webp';
+} else if (contentType.includes('gif')) {
+    format = 'gif';
+} else if (contentType.includes('svg')) {
+    format = 'svg';
+}
 
     return {
       format,
