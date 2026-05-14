@@ -1,0 +1,64 @@
+
+/* 
+ * 公文排版辅助样式
+ * 用于在支持HTML/CSS的Markdown编辑器或Web应用中模拟公文视觉效果
+ * 注意：实际公文打印需遵循GB/T 9704-2012物理打印标准
+ */
+
+.gov-doc-container {
+    font-family: "FangSong_GB2312", "FangSong", serif; /* 正文仿宋 */
+    font-size: 16pt; /* 三号字约等于16pt */
+    line-height: 28pt; /* 固定行距28磅 */
+    color: #000;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 3.7cm 2.6cm 3.5cm 2.8cm; /* 上右下左边距 */
+    background: #fff;
+}
+
+.gov-title {
+    font-family: "FZXiaoBiaoSong-B05S", "SimSun", serif; /* 小标宋 */
+    font-size: 22pt; /* 二号字 */
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 2em;
+    line-height: 1.5;
+}
+
+.gov-header-info {
+    text-align: center;
+    font-size: 16pt;
+    margin-bottom: 2em;
+}
+
+.gov-main-body {
+    text-indent: 2em; /* 首行缩进2字符 */
+    margin-bottom: 1em;
+}
+
+.gov-h1 {
+    font-family: "Heiti SC", "SimHei", sans-serif; /* 黑体 */
+    font-size: 16pt;
+    font-weight: normal; /* 国标通常不加粗，视单位习惯 */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.gov-h2 {
+    font-family: "KaiTi_GB2312", "KaiTi", serif; /* 楷体 */
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.gov-signature-block {
+    text-align: right;
+    margin-top: 3em;
+    padding-right: 4em; /* 右空四字 */
+}
+
+.gov-date {
+    font-family: "Times New Roman", serif; /* 日期阿拉伯数字 */
+    font-size: 16pt;
+}

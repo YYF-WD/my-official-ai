@@ -84,3 +84,8 @@ openspec/
 
 docs/business/
 anthropic-paper-test/
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
